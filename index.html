@@ -1,226 +1,220 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>火山扫描 - 智能OCR识别软件</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #f5f7fa;
-            color: #2c3e50;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* 头部 */
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 0 40px;
-            text-align: center;
-        }
-        .logo {
-            font-size: 64px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        .subtitle {
-            font-size: 20px;
-            opacity: 0.9;
-            margin-bottom: 30px;
-        }
-        .download-btn {
-            display: inline-block;
-            background: #27ae60;
-            color: white;
-            padding: 14px 40px;
-            border-radius: 40px;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .download-btn:hover {
-            background: #2ecc71;
-            transform: translateY(-2px);
-        }
-        /* 功能卡片 */
-        .features {
-            padding: 60px 0;
-            background: white;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 40px;
-            font-weight: 600;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: #f8f9fa;
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        .card-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-        .card p {
-            color: #6c757d;
-        }
-        /* 截图区域 */
-        .screenshots {
-            padding: 60px 0;
-            background: #f5f7fa;
-        }
-        .screenshot-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-        .screenshot-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .screenshot-card img {
-            width: 100%;
-            display: block;
-        }
-        .screenshot-card p {
-            padding: 15px;
-            text-align: center;
-            font-weight: 500;
-        }
-        /* 页脚 */
-        .footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            font-size: 14px;
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 32px; }
-            .subtitle { font-size: 16px; }
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div class="container">
-            <div class="logo">📄🔍</div>
-            <h1>火山扫描</h1>
-            <div class="subtitle">智能OCR识别 · AI纠错 · 批量处理 · 专业文档编辑</div>
-            <a href="#" class="download-btn">📥 下载体验（即将发布）</a>
-        </div>
-    </div>
-
-    <div class="features">
-        <div class="container">
-            <div class="section-title">✨ 强大功能</div>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon">📷</div>
-                    <h3>拍照识别</h3>
-                    <p>调用摄像头拍照，实时预览，一键OCR识别，支持批量拍照。</p>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="火山扫描 - 专业级扫描件文字重排版系统，支持OCR识别、AI智能纠错、证件/试卷/书籍/发票专用识别、PDF编辑工具" />
+        <meta name="author" content="火山扫描团队" />
+        <title>火山扫描 - 智能OCR文字识别软件</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">📄 火山扫描</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#features">功能</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">截图</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#download">下载</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">联系</a></li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🖼️</div>
-                    <h3>批量图片处理</h3>
-                    <p>多张图片批量导入，缩略图预览，分别识别或合并导出。</p>
+            </div>
+        </nav>
+        <!-- Masthead (Hero)-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">火山扫描 · 扫描件文字重排版系统</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">GLM-OCR + RapidOCR 双引擎 · AI智能纠错 · 证件/试卷/书籍/发票专用识别 · PDF编辑器 · 完全离线</p>
+                        <a class="btn btn-primary btn-xl" href="#download">免费下载</a>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🤖</div>
-                    <h3>AI智能纠错</h3>
-                    <p>基于Qwen2大模型，自动修正OCR识别错误，蓝色标记差异。</p>
+            </div>
+        </header>
+        <!-- Features (Services)-->
+        <section class="page-section" id="features">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">强大功能</h2>
+                <hr class="divider" />
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="fas fa-camera fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">双引擎OCR</h3>
+                            <p class="text-muted mb-0">GLM-OCR + RapidOCR 自动切换，兼顾速度与精度，支持中英文混合识别。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="fas fa-magic fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">AI智能纠错</h3>
+                            <p class="text-muted mb-0">基于大模型自动修正错别字，蓝色标记修改处，可手动编辑。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="fas fa-id-card fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">证件识别</h3>
+                            <p class="text-muted mb-0">身份证、驾驶证、行驶证、营业执照、护照，一键提取关键信息。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="fas fa-file-alt fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">试卷/书籍/发票</h3>
+                            <p class="text-muted mb-0">专用识别模块：试卷结构保留、书籍分页导出、发票金额明细提取。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="fas fa-file-pdf fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">PDF编辑器</h3>
+                            <p class="text-muted mb-0">保留原文档格式、表格、印章，支持编辑与导出Word。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="fas fa-images fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">批量处理</h3>
+                            <p class="text-muted mb-0">多图导入、缩略图预览、翻页、继续添加，支持分别识别或合并识别。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="fas fa-video fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">拍照识别</h3>
+                            <p class="text-muted mb-0">调用摄像头拍照，自动添加到批量列表，支持多次拍照。</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="fas fa-wrench fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">图片预处理</h3>
+                            <p class="text-muted mb-0">AI智能增强、亮度/对比度/饱和度调整、滤镜（灰度/黑白/锐化等）。</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">📄</div>
-                    <h3>PDF编辑</h3>
-                    <p>保留原格式、表格、印章，支持编辑并导出Word。</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🔧</div>
-                    <h3>PDF工具包</h3>
-                    <p>合并、拆分、旋转、压缩、转图片、提取图片一应俱全。</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🆔</div>
-                    <h3>证件识别</h3>
-                    <p>身份证、驾驶证、营业执照等自动提取关键信息。</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📝</div>
-                    <h3>试卷识别</h3>
-                    <p>智能区分大题小题，保留题型结构，导出Word。</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📚</div>
-                    <h3>书籍识别</h3>
-                    <p>批量导入页面，逐页OCR，合并导出为Word。</p>
+            </div>
+        </section>
+        <!-- Portfolio (Screenshots) -->
+        <div id="portfolio">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="主界面">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="主界面" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">截图</div>
+                                <div class="project-name">主界面</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="OCR识别">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="OCR识别" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">截图</div>
+                                <div class="project-name">OCR识别</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="证件识别">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="证件识别" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">截图</div>
+                                <div class="project-name">证件识别</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="PDF编辑器">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="PDF编辑器" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">截图</div>
+                                <div class="project-name">PDF编辑器</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="批量处理">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="批量处理" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">截图</div>
+                                <div class="project-name">批量处理</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="发票识别">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="发票识别" />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">截图</div>
+                                <div class="project-name">试卷识别</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="screenshots">
-        <div class="container">
-            <div class="section-title">📸 软件截图</div>
-            <div class="screenshot-grid">
-                <!-- 替换为你的实际截图 -->
-                <div class="screenshot-card">
-                    <img src="screenshot1.png" alt="主界面" onerror="this.src='https://placehold.co/400x300?text=主界面'">
-                    <p>主界面 - 功能卡片</p>
+        <!-- Download Call to Action-->
+        <section class="page-section bg-dark text-white" id="download">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">立即体验火山扫描</h2>
+                <p class="mb-4">支持 Windows 10/11 | 完全离线 | 永久免费</p>
+                <a class="btn btn-light btn-xl" href="#download-link">下载最新版本 v1.0</a>
+                <p class="mt-3 small text-white-50">安装包约 150MB | 提取码：xxxx</p>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">联系与反馈</h2>
+                        <hr class="divider" />
+                        <p class="text-muted mb-5">使用中遇到任何问题或有功能建议，欢迎通过邮件或QQ群联系我们。</p>
+                    </div>
                 </div>
-                <div class="screenshot-card">
-                    <img src="screenshot2.png" alt="OCR识别" onerror="this.src='https://placehold.co/400x300?text=OCR识别'">
-                    <p>OCR识别 + 智能纠错</p>
-                </div>
-                <div class="screenshot-card">
-                    <img src="screenshot3.png" alt="证件识别" onerror="this.src='https://placehold.co/400x300?text=证件识别'">
-                    <p>证件识别 - 身份证</p>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                        <i class="bi-envelope fs-2 mb-3 text-muted"></i>
+                        <div><a href="mailto:canshi348@gmail.com">canshi348@gmail.com</a></div>
+                    </div>
+                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                        <i class="bi-qq fs-2 mb-3 text-muted"></i>
+                        <div>QQ：3251516252</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="container">
-            <p>&copy; 2026 火山扫描 | 本软件基于PyQt6 + Ollama开发 | 本地处理，隐私安全</p>
-            <p style="margin-top: 10px; font-size: 12px;">联系作者: canshi348@gmail.com</p>
-        </div>
-    </div>
-</body>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2026 火山扫描 | 本软件仅供学习交流，请勿用于商业用途</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
