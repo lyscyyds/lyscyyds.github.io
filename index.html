@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火山扫描 - 智能OCR识别软件</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 头部 */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 14px 40px;
+            border-radius: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .download-btn:hover {
+            background: #2ecc71;
+            transform: translateY(-2px);
+        }
+        /* 功能卡片 */
+        .features {
+            padding: 60px 0;
+            background: white;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: #6c757d;
+        }
+        /* 截图区域 */
+        .screenshots {
+            padding: 60px 0;
+            background: #f5f7fa;
+        }
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .screenshot-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .screenshot-card img {
+            width: 100%;
+            display: block;
+        }
+        .screenshot-card p {
+            padding: 15px;
+            text-align: center;
+            font-weight: 500;
+        }
+        /* 页脚 */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 32px; }
+            .subtitle { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">📄🔍</div>
+            <h1>火山扫描</h1>
+            <div class="subtitle">智能OCR识别 · AI纠错 · 批量处理 · 专业文档编辑</div>
+            <a href="#" class="download-btn">📥 下载体验（即将发布）</a>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="container">
+            <div class="section-title">✨ 强大功能</div>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">📷</div>
+                    <h3>拍照识别</h3>
+                    <p>调用摄像头拍照，实时预览，一键OCR识别，支持批量拍照。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🖼️</div>
+                    <h3>批量图片处理</h3>
+                    <p>多张图片批量导入，缩略图预览，分别识别或合并导出。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3>AI智能纠错</h3>
+                    <p>基于Qwen2大模型，自动修正OCR识别错误，蓝色标记差异。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📄</div>
+                    <h3>PDF编辑</h3>
+                    <p>保留原格式、表格、印章，支持编辑并导出Word。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3>PDF工具包</h3>
+                    <p>合并、拆分、旋转、压缩、转图片、提取图片一应俱全。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🆔</div>
+                    <h3>证件识别</h3>
+                    <p>身份证、驾驶证、营业执照等自动提取关键信息。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📝</div>
+                    <h3>试卷识别</h3>
+                    <p>智能区分大题小题，保留题型结构，导出Word。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>书籍识别</h3>
+                    <p>批量导入页面，逐页OCR，合并导出为Word。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="screenshots">
+        <div class="container">
+            <div class="section-title">📸 软件截图</div>
+            <div class="screenshot-grid">
+                <!-- 替换为你的实际截图 -->
+                <div class="screenshot-card">
+                    <img src="screenshot1.png" alt="主界面" onerror="this.src='https://placehold.co/400x300?text=主界面'">
+                    <p>主界面 - 功能卡片</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="screenshot2.png" alt="OCR识别" onerror="this.src='https://placehold.co/400x300?text=OCR识别'">
+                    <p>OCR识别 + 智能纠错</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="screenshot3.png" alt="证件识别" onerror="this.src='https://placehold.co/400x300?text=证件识别'">
+                    <p>证件识别 - 身份证</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>&copy; 2026 火山扫描 | 本软件基于PyQt6 + Ollama开发 | 本地处理，隐私安全</p>
+            <p style="margin-top: 10px; font-size: 12px;">联系作者: canshi348@gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>
